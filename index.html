@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e10600" />
+    <meta name="description" content="FIZZÉ — Sparkling drinks with attitude. Pop. Pour. Fizz." />
+    <title>FIZZÉ — Pop. Pour. Fizz.</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23e10600'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial Black'>F</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-bubbles" aria-hidden="true"></div>
+      <div class="loader-logo">FIZZ<span>É</span></div>
+      <div class="loader-count"><span id="loader-num">0</span>%</div>
+    </div>
+
+    <div class="cursor" aria-hidden="true"></div>
+
+    <!-- Announcement bar -->
+    <div class="announce" aria-hidden="true">
+      <div class="announce-track">
+        <span>ZERO SUGAR. ALL SPARKLE.</span><b>✳</b><span>FREE DELIVERY ABOVE ₹499</span><b>✳</b><span>CHILL. POP. POUR.</span><b>✳</b><span>NEW: BERRY BLAST</span><b>✳</b>
+        <span>ZERO SUGAR. ALL SPARKLE.</span><b>✳</b><span>FREE DELIVERY ABOVE ₹499</span><b>✳</b><span>CHILL. POP. POUR.</span><b>✳</b><span>NEW: BERRY BLAST</span><b>✳</b>
+      </div>
+    </div>
+
+    <header class="header" id="top">
+      <a class="brand" href="#top">FIZZ<span>É</span></a>
+      <nav class="desktop-nav">
+        <a href="#experience">EXPERIENCE</a><a href="#the-pour">THE POUR</a><a href="#flavours">FLAVOURS</a><a href="#customizer">CUSTOM CAN</a><a href="#nutrition">NUTRITION</a><a href="#recipes">RECIPES</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="sound-btn on" id="sound-toggle" aria-label="Toggle ASMR Sound" title="ASMR Sound Effects">
+          <span class="sound-bars"><i></i><i></i><i></i></span>
+          <b id="sound-label">SOUND ON</b>
+        </button>
+        <button class="icon-btn" id="search-open" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        </button>
+        <button class="icon-btn hide-sm" id="account-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+        </button>
+        <button class="cart-btn" id="cart-open" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav>
+        <a href="#experience">EXPERIENCE <span>01</span></a><a href="#the-pour">THE POUR <span>02</span></a><a href="#flavours">FLAVOURS <span>03</span></a><a href="#customizer">CUSTOM CAN <span>04</span></a><a href="#nutrition">NUTRITION <span>05</span></a><a href="#recipes">RECIPES <span>06</span></a><a href="#faq">FAQ <span>07</span></a>
+      </nav>
+      <p>STAY FIZZÉ. © 2026</p>
+    </div>
+
+    <main>
+      <!-- HERO 3D -->
+      <section class="hero" id="experience">
+        <div class="hero-stage">
+          <div class="noise" aria-hidden="true"></div>
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <div class="hero-watermark" aria-hidden="true">FIZZ</div>
+          <div class="hero-copy">
+            <div class="eyebrow"><span></span> SPARKLING SINCE 2026</div>
+            <h1><span>POP IT.</span><span>POUR <em>IT.</em></span><span>FIZZ IT<i class="dot">.</i></span></h1>
+            <p>Crisp bubbles. Bold flavour. Zero sugar.<br />A moment that's all yours.</p>
+            <div class="hero-switcher" id="hero-switcher" aria-label="Switch hero can flavour">
+              <button class="active" data-flavour="cola" style="--sw:#e10600" title="Classic Cola"><span></span>COLA</button>
+              <button data-flavour="lemon" style="--sw:#f2c200" title="Lemon Zest"><span></span>LEMON</button>
+              <button data-flavour="orange" style="--sw:#ff6a00" title="Orange Pop"><span></span>ORANGE</button>
+              <button data-flavour="berry" style="--sw:#8a1d6b" title="Berry Blast"><span></span>BERRY</button>
+            </div>
+            <a class="pill-button magnetic" href="#flavours">FIND YOUR FIZZ <span>↗</span></a>
+          </div>
+          <canvas id="can-canvas"></canvas>
+          <div class="hero-aside">
+            <span class="hero-caption" data-i="0">THE ICONIC<br />SILVER CAN.</span>
+            <span class="hero-caption" data-i="1">ICE COLD<br />BUBBLES.</span>
+            <span class="hero-caption" data-i="2">ZERO SUGAR.<br />ALL SPARKLE.</span>
+          </div>
+          <div class="hero-bottom">
+            <div class="hero-bottom-left"><span class="spark">✳</span><div><strong>YOUR MOMENT.</strong><small>YOUR FIZZÉ.</small></div></div>
+            <div class="scroll-cue"><span>SCROLL TO ROTATE</span><div class="progress"><i id="hero-progress"></i></div><b>↓</b></div>
+            <div class="hero-count"><span id="hero-num">01</span> / 03</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>STAY FIZZY</span><b>✳</b><span>POP. POUR. FIZZ.</span><b>✳</b><span>STAY FIZZY</span><b>✳</b><span>POP. POUR. FIZZ.</span><b>✳</b>
+          <span>STAY FIZZY</span><b>✳</b><span>POP. POUR. FIZZ.</span><b>✳</b><span>STAY FIZZY</span><b>✳</b><span>POP. POUR. FIZZ.</span><b>✳</b>
+        </div>
+      </div>
+
+      <section class="quick-facts">
+        <div class="reveal"><strong><span class="counter" data-to="0">0</span><small>g</small></strong><p>SUGAR</p></div>
+        <div class="reveal"><strong><span class="counter" data-to="0">0</span></strong><p>CALORIES</p></div>
+        <div class="reveal"><strong><span class="counter" data-to="4">0</span></strong><p>BOLD FLAVOURS</p></div>
+        <div class="reveal"><strong><span class="counter" data-to="100">0</span><small>%</small></strong><p>REAL FIZZ</p></div>
+      </section>
+
+      <!-- POUR 3D -->
+      <section class="pour" id="the-pour">
+        <div class="pour-stage">
+          <div class="pour-grid" aria-hidden="true"></div>
+          <div class="pour-watermark" aria-hidden="true">POUR</div>
+          <div class="pour-disc" aria-hidden="true"></div>
+          <div class="pour-top"><span><i></i> A MOMENT MADE FOR YOU</span><span>THE PERFECT POUR / <b id="pour-num">01</b>—03</span></div>
+          <div class="pour-copy">
+            <div class="section-label"><span></span> A LITTLE FIZZ, A LOT OF FEELING</div>
+            <h2>OPEN<span>.</span><br />POUR<span>.</span><br /><em>ENJOY.</em></h2>
+            <p>From the first click to the last bubble — make your next break a little more extraordinary.</p>
+            <div class="pour-step">
+              <span class="pour-step-number" id="step-num">01</span>
+              <div><strong id="step-title">CRACK IT OPEN</strong><small id="step-cap">THE MOMENT STARTS HERE</small></div>
+            </div>
+          </div>
+          <canvas id="pour-canvas"></canvas>
+          <div class="pour-bottom"><span>THE FIZZÉ RITUAL</span><div class="scroll-cue"><span>KEEP SCROLLING TO POUR</span><div class="progress"><i id="pour-progress"></i></div><b>↓</b></div><span></span></div>
+        </div>
+      </section>
+
+      <!-- FLAVOURS / SHOP -->
+      <section class="shop section-pad" id="flavours">
+        <div class="section-head reveal">
+          <div><div class="section-label"><span></span> 🔥 MOST ORDERED</div><h2>FIND YOUR<br /><em>FIZZ.</em></h2></div>
+          <div class="tabs" id="tabs">
+            <button class="active" data-filter="all">ALL</button><button data-filter="cola">COLA</button><button data-filter="lemon">LEMON</button><button data-filter="orange">ORANGE</button><button data-filter="berry">BERRY</button>
+          </div>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="shop-all reveal"><a class="pill-button magnetic" href="#" id="shop-all">SHOP ALL <span>↗</span></a></div>
+      </section>
+
+      <!-- CUSTOM 3D CAN PERSONALIZER (#4) -->
+      <section class="customizer section-pad" id="customizer">
+        <div class="customizer-grid">
+          <div class="customizer-stage" id="custom-can-stage">
+            <span class="spin-hint">LIVE 3D PREVIEW · DRAG TO SPIN 360° ↻</span>
+          </div>
+          <div class="customizer-controls reveal">
+            <div class="section-label"><span></span> ✨ MAKE IT YOURS</div>
+            <h2>YOUR NAME<br />ON THE <em>CAN.</em></h2>
+            <p>Type your name (or your best friend's) and watch it print live in 3D on the FIZZÉ metallic can.</p>
+            <div class="cust-field">
+              <label for="cust-name">1. ENTER NAME ON CAN (MAX 14 CHARS)</label>
+              <input id="cust-name" type="text" maxlength="14" value="SAUMYA" placeholder="E.g. SAUMYA" autocomplete="off" />
+            </div>
+            <div class="cust-field">
+              <label>2. CHOOSE FLAVOUR</label>
+              <div class="cust-flavours" id="cust-flavours">
+                <button class="active" data-flavour="cola" style="--sw:#e10600">COLA</button>
+                <button data-flavour="lemon" style="--sw:#f2c200">LEMON</button>
+                <button data-flavour="orange" style="--sw:#ff6a00">ORANGE</button>
+                <button data-flavour="berry" style="--sw:#8a1d6b">BERRY</button>
+              </div>
+            </div>
+            <div class="cust-buy">
+              <div><strong>₹349</strong><small>Custom 6-Pack · Printed Edition</small></div>
+              <button class="pill-button magnetic" id="cust-add">ADD CUSTOM PACK TO CART <span>+</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUTRITION & COMPARISON SLIDER (#5) -->
+      <section class="nutrition-sec section-pad" id="nutrition">
+        <div class="section-head reveal">
+          <div><div class="section-label light"><span></span> THE FACTS BEHIND THE FIZZ</div><h2>ZERO GUILT.<br /><em>ALL ATTITUDE.</em></h2></div>
+          <p>See how an ice-cold 330ml can of FIZZÉ stacks up against regular sugary sodas.</p>
+        </div>
+        <div class="nutri-layout">
+          <div class="compare-card reveal">
+            <div class="compare-head">
+              <span>METRIC (PER 330ML CAN)</span>
+              <span class="fizze-col">FIZZÉ ✨</span>
+              <span class="soda-col">REGULAR SODA</span>
+            </div>
+            <div class="compare-row">
+              <div class="c-label"><strong>TOTAL SUGAR</strong><small>Sweetened naturally with plant stevia</small></div>
+              <div class="c-bars">
+                <div class="c-bar fizze"><i style="--w:4%"></i><b>0g</b></div>
+                <div class="c-bar soda"><i style="--w:100%"></i><b>39g (9.5 tsp)</b></div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="c-label"><strong>CALORIES</strong><small>Clean energy without the crash</small></div>
+              <div class="c-bars">
+                <div class="c-bar fizze"><i style="--w:4%"></i><b>0 kcal</b></div>
+                <div class="c-bar soda"><i style="--w:100%"></i><b>150 kcal</b></div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="c-label"><strong>CARBONATION / FIZZ</strong><small>Micro-bubble signature sparkle</small></div>
+              <div class="c-bars">
+                <div class="c-bar fizze"><i style="--w:100%"></i><b>100% EXTRA FIZZ</b></div>
+                <div class="c-bar soda"><i style="--w:65%"></i><b>Standard</b></div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="c-label"><strong>ARTIFICIAL PRESERVATIVES</strong><small>100% vegan & clean-label</small></div>
+              <div class="c-bars">
+                <div class="c-bar fizze"><i style="--w:4%"></i><b>0% NONE</b></div>
+                <div class="c-bar soda"><i style="--w:90%"></i><b>High</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nutri-label-card reveal">
+            <div class="nutri-top"><span>FIZZÉ — 330 ML CAN</span><span>01 / THE FACTS</span></div>
+            <h3>NUTRITION<br />FACTS<span>.</span></h3>
+            <p class="serving">Serving Size: 1 Can (330 ml)</p>
+            <div class="nutri-grid">
+              <div><strong>0</strong><span>CALORIES</span></div>
+              <div><strong>0<small>g</small></strong><span>TOTAL SUGAR</span></div>
+              <div><strong>0<small>g</small></strong><span>CARBS</span></div>
+              <div><strong>15<small>mg</small></strong><span>SODIUM</span></div>
+            </div>
+            <p class="ingredients"><strong>INGREDIENTS:</strong> Carbonated Himalayan Water, Natural Citrus & Botanical Extracts, Plant-Based Stevia Leaf Extract, Citric Acid, Vitamin C.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY -->
+      <section class="story section-pad" id="story">
+        <div class="section-head reveal">
+          <div><div class="section-label light"><span></span> OUR STORY</div><h2>BORN TO<br /><em>BUBBLE</em><br />OVER<span class="red">.</span></h2></div>
+          <p>FIZZÉ started with one simple idea: refreshment should feel like a moment, not a habit. Crisp, cold, and a little bit loud.</p>
+        </div>
+        <div class="timeline">
+          <article class="reveal"><span>01 / THE IDEA</span><strong>2024<i>✳</i></strong><h3>A KITCHEN EXPERIMENT</h3><p>Bubbles, citrus and a lot of failed batches. Then one perfect sip.</p></article>
+          <article class="reveal"><span>02 / THE CAN</span><strong>2025<i>✳</i></strong><h3>SILVER & RED</h3><p>An icon designed to be spotted from across the room.</p></article>
+          <article class="reveal"><span>03 / RIGHT NOW</span><strong>TODAY<i>✳</i></strong><h3>FOUR BOLD FLAVOURS</h3><p>Cola, Lemon, Orange and Berry — pick your kind of fizz.</p></article>
+        </div>
+      </section>
+
+      <!-- SHOPPABLE VIDEOS -->
+      <section class="moments section-pad" id="moments">
+        <div class="section-head reveal">
+          <div><div class="section-label light"><span></span> SHOP THE MOMENT</div><h2>MIXOLOGY<br /><em>MOMENTS.</em></h2></div>
+          <div class="slider-btns light"><button id="vid-prev" aria-label="Previous">←</button><button id="vid-next" aria-label="Next">→</button></div>
+        </div>
+        <div class="video-track" id="video-track"></div>
+      </section>
+
+      <!-- RECIPES -->
+      <section class="recipes section-pad" id="recipes">
+        <div class="section-head reveal">
+          <div><div class="section-label"><span></span> RECIPES</div><h2>MIX IT<br /><em>YOUR WAY.</em></h2></div>
+          <div class="tabs" id="recipe-tabs"></div>
+        </div>
+        <div class="recipe-feature" id="recipe-feature"></div>
+      </section>
+
+      <!-- BREAK -->
+      <section class="break">
+        <div class="break-bg" aria-hidden="true"><span>FIZZ</span><span>FIZZ</span><span>FIZZ</span></div>
+        <div class="break-text reveal">
+          <div class="section-label light"><span></span> A LITTLE MOMENT FOR YOU</div>
+          <h2>TAKE A<br /><em>BREAK.</em><br />MAKE IT<br />FIZZY.</h2>
+          <a class="pill-button white magnetic" href="#flavours">SHOP NOW <span>↗</span></a>
+        </div>
+      </section>
+
+      <!-- TRUSTED -->
+      <section class="trusted">
+        <p class="reveal">TRUSTED BY CAFÉS, BARS & PARTY PEOPLE</p>
+        <div class="logo-marquee"><div class="logo-track">
+          <span>CAFÉ NOIR</span><span>✳</span><span>THE ROOFTOP</span><span>✳</span><span>BREW & CO.</span><span>✳</span><span>NEON BAR</span><span>✳</span><span>URBAN BITES</span><span>✳</span><span>SKYLOUNGE</span><span>✳</span>
+          <span>CAFÉ NOIR</span><span>✳</span><span>THE ROOFTOP</span><span>✳</span><span>BREW & CO.</span><span>✳</span><span>NEON BAR</span><span>✳</span><span>URBAN BITES</span><span>✳</span><span>SKYLOUNGE</span><span>✳</span>
+        </div></div>
+        <p class="reveal featured-title">AS FEATURED IN</p>
+        <div class="logo-marquee featured"><div class="logo-track reverse">
+          <span>THE FOOD MAG</span><span>✳</span><span>DAILY BUZZ</span><span>✳</span><span>TASTE TODAY</span><span>✳</span><span>STARTUP TIMES</span><span>✳</span><span>CITY LIFE</span><span>✳</span>
+          <span>THE FOOD MAG</span><span>✳</span><span>DAILY BUZZ</span><span>✳</span><span>TASTE TODAY</span><span>✳</span><span>STARTUP TIMES</span><span>✳</span><span>CITY LIFE</span><span>✳</span>
+        </div></div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq section-pad" id="faq">
+        <div class="faq-head reveal"><div class="section-label"><span></span> THE FIZZ FILES</div><h2>GOOD<br /><em>QUESTION.</em></h2><p>A few things you might be curious about.</p></div>
+        <div class="faq-list reveal">
+          <details><summary>Does FIZZÉ contain sugar?<span>+</span></summary><p>Nope. Every FIZZÉ flavour is zero sugar and zero calories, sweetened with plant-based sweeteners.</p></details>
+          <details><summary>How do I order?<span>+</span></summary><p>Add your favourites to the cart and tap "Order on WhatsApp". We'll confirm your order and delivery details there.</p></details>
+          <details><summary>Do you deliver everywhere?<span>+</span></summary><p>We currently deliver in select cities. Message us on WhatsApp to check your pincode.</p></details>
+          <details><summary>Can I order in bulk for events?<span>+</span></summary><p>Absolutely! We supply cafés, parties and events. Reach out and we'll make you a custom pack.</p></details>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter section-pad">
+        <div class="reveal">
+          <div class="section-label light"><span></span> JOIN THE INNER CIRCLE</div>
+          <h2>BE THE FIRST<br />TO <em>SIP.</em></h2>
+          <p>Sign up for early access to new flavour drops, exclusive offers and sparkling updates from FIZZÉ.</p>
+          <div class="perks"><span>✳ EARLY DROPS</span><span>✳ MEMBER-ONLY OFFERS</span><span>✳ 10% OFF FIRST ORDER</span></div>
+          <form id="news-form"><input type="email" placeholder="Your email" required /><button class="pill-button white" type="submit">JOIN <span>↗</span></button></form>
+          <small id="news-msg"></small>
+        </div>
+      </section>
+
+      <section class="closing">
+        <span>THE ORIGINAL. THE ICON. THE MOMENT.</span>
+        <h2>STAY <em>FIZZ</em>É<i class="red">.</i></h2>
+        <a href="#top">BACK TO THE TOP ↑</a>
+      </section>
+    </main>
+
+    <footer>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,90 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+      <div class="footer-main">
+        <div><div class="brand">FIZZ<span>É</span></div><p>Good taste.<br />Great moments.</p></div>
+        <div class="footer-links">
+          <div><span>EXPLORE</span><a href="#experience">Experience</a><a href="#flavours">Flavours</a><a href="#story">Our story</a></div>
+          <div><span>HELP</span><a href="#faq">FAQ</a><a href="#">Shipping policy</a><a href="#">Contact</a></div>
+          <div><span>SOCIAL</span><a href="#">Instagram ↗</a><a href="#">YouTube ↗</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 FIZZÉ</span><span>STAY FIZZY.</span></div>
+    </footer>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Cart">
+      <div class="cart-head"><h3>YOUR CART</h3><button id="cart-close" aria-label="Close cart">✕</button></div>
+      <div class="cart-items" id="cart-items" data-lenis-prevent></div>
+      <div class="cart-foot">
+        <div class="cart-total"><span>TOTAL</span><strong id="cart-total">₹0</strong></div>
+        <a class="pill-button full" id="cart-whatsapp" href="#" target="_blank" rel="noreferrer">ORDER ON WHATSAPP <span>↗</span></a>
+        <small>No online payment — we'll confirm your order on WhatsApp.</small>
+      </div>
+    </aside>
+    <div class="toast" id="toast"></div>
+
+    <!-- SEARCH -->
+    <div class="search-panel" id="search-panel" data-lenis-prevent>
+      <div class="search-box">
+        <input id="search-input" type="search" placeholder="Search flavours, packs…" autocomplete="off" />
+        <button id="search-close" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- QUICK VIEW / REEL MODAL -->
+    <div class="modal" id="modal"><div class="modal-bg" data-close></div><div class="modal-box" id="modal-box" data-lenis-prevent></div></div>
+
+    <!-- WHATSAPP FLOAT -->
+    <a class="wa-float" id="wa-float" href="#" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+      <span class="wa-bubble">Chat with us</span>
+      <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg>
+    </a>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
