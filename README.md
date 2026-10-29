@@ -2,7 +2,7 @@
 
 **FIZZÉ** is an interactive 3D scrollytelling and D2C sparkling beverage experience built with **Three.js**, **GSAP ScrollTrigger**, **Lenis Smooth Scroll**, and **Vite**.
 
-🔗 **Live Website:** [https://bansalsaumya.github.io/fizze/](https://bansalsaumya.github.io/fizze/)
+🔗 **Live Website:** [https://fizze.vercel.app/](https://fizze.vercel.app/)
 
 ![FIZZÉ Banner](./public/og-image.svg)
 
@@ -48,3 +48,4 @@ npm run build
 ---
 
 Designed & developed by **Saumya Bansal** · © 2026 **FIZZÉ**
+

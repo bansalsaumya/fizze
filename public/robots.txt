@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bansalsaumya.github.io/fizze/sitemap.xml
+Sitemap: https://fizze.vercel.app/sitemap.xml
 
