@@ -1,6 +1,6 @@
 import { playBubblePop } from './sound.js';
 // Simple display-only cart (no payment). Stored in localStorage.
-export const WHATSAPP_NUMBER = '919999999999'; // TODO: apna WhatsApp number daalo (country code ke saath)
+export const WHATSAPP_NUMBER = '917435967985';
 const KEY = 'fizze-cart';
 let items = JSON.parse(localStorage.getItem(KEY) || '[]');
 
