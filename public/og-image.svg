@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="65%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#e9e9ec"/>
+      <stop offset="100%" stop-color="#c9c9ce"/>
+    </radialGradient>
+    <linearGradient id="can" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4d4d8"/>
+      <stop offset="35%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#c4c4cc"/>
+      <stop offset="100%" stop-color="#e4e4e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="880" cy="315" r="240" fill="none" stroke="#e10600" stroke-width="2" stroke-dasharray="10 10" opacity="0.4"/>
+  <!-- Red Accent Stripe -->
+  <rect x="0" y="0" width="1200" height="16" fill="#e10600"/>
+  <!-- Stylized 3D Can Illustration -->
+  <g transform="translate(880, 315) rotate(-8)">
+    <rect x="-110" y="-210" width="220" height="420" rx="28" fill="url(#can)" stroke="#b4b4bc" stroke-width="3"/>
+    <rect x="-110" y="-185" width="220" height="32" fill="#e10600"/>
+    <path d="M-110,60 Q-55,30 0,60 T110,60 L110,185 Q110,210 85,210 L-85,210 Q-110,210 -110,185 Z" fill="#e10600"/>
+    <text x="0" y="-20" font-family="Impact, Arial Black, sans-serif" font-size="84" font-weight="900" fill="#e10600" text-anchor="middle">FIZZÉ</text>
+    <rect x="-85" y="0" width="170" height="32" rx="8" fill="#111"/>
+    <text x="0" y="22" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">CLASSIC COLA</text>
+    <text x="0" y="155" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">ZERO SUGAR · 330 ML</text>
+  </g>
+  <!-- Left Hero Typography -->
+  <g transform="translate(80, 140)">
+    <circle cx="12" cy="0" r="8" fill="#e10600"/>
+    <text x="32" y="6" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4" fill="#111">ZERO SUGAR · 0 CALORIES · 100% FIZZ</text>
+    <text x="0" y="125" font-family="Impact, Arial Black, sans-serif" font-size="112" font-weight="900" fill="#0d0d0d">POP IT. POUR</text>
+    <text x="0" y="240" font-family="Impact, Arial Black, sans-serif" font-size="112" font-weight="900" fill="#e10600">FIZZÉ.</text>
+    <text x="0" y="310" font-family="Arial, sans-serif" font-size="26" fill="#333">Interactive 3D Sparkling Drink Experience —</text>
+    <text x="0" y="346" font-family="Arial, sans-serif" font-size="26" fill="#333">Cola, Lemon Zest, Orange Pop &amp; Berry Blast.</text>
+    <rect x="0" y="385" width="290" height="58" rx="29" fill="#e10600"/>
+    <text x="145" y="422" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#fff" text-anchor="middle">FIND YOUR FIZZ ↗</text>
+  </g>
+</svg>

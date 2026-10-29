@@ -1,0 +1,16 @@
+{
+  "name": "FIZZÉ — Zero Sugar Sparkling Drinks",
+  "short_name": "FIZZÉ",
+  "description": "Crisp bubbles. Bold flavour. Zero sugar. Interactive 3D sparkling drink experience.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#e9e9ec",
+  "theme_color": "#e10600",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23e10600'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial Black'>F</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

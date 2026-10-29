@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bansalsaumya.github.io/fizze/sitemap.xml
